@@ -134,8 +134,6 @@ void model_data::push_back(const model_data &other) {
 
         const std::vector<index_value_type> &appended = other.indexed() ? other.m_Indexes : implied;
 
-        m_Indexes.reserve(m_Indexes.size() + appended.size());
-
         for (const auto index : appended)
             m_Indexes.push_back(static_cast<index_value_type>(index + offset));
     }

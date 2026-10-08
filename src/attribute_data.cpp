@@ -42,7 +42,6 @@ void attribute_data::push_back(const attribute_data &rhs) {
             .append(std::to_string(m_NumberOfComponentsPerAttribute))
             .append("; the result would not describe either"));
 
-    m_Components.reserve(m_Components.size() + rhs.m_Components.size());
     m_Components.insert(m_Components.end(), rhs.m_Components.begin(), rhs.m_Components.end());
 }
 
